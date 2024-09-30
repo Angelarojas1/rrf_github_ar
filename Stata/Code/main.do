@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 	* Set version
-	*version ???
+	version 18.0 // change this to the version everyone has
 
 	* Set project global(s)	
 	// User: you 
