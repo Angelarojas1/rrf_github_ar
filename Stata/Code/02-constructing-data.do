@@ -114,8 +114,8 @@
 			// Merge hh and member data with the treatment data, ensure the treatment status is included in the final dataset.
  	merge m:1 vid using "${data}/Raw/treat_status.dta", assert(3) nogen 
 
-	
-			//Save data
+	* Save data
+		save ///
 		"${data}/Final/TZA_CCT_analysis.dta", replace
 
 *-------------------------------------------------------------------------------	
