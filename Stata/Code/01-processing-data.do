@@ -131,6 +131,10 @@ cap isid hhid // NO
 		// add variable/value labels
 		// create a template first, then edit the template and change the syntax to 
 		// iecodebook apply
+		
+		/*iecodebook template  using ///
+					"${outputs}/hh_mem_codebook.xlsx" */
+					
 		iecodebook apply  using ///
 					"${outputs}/hh_mem_codebook.xlsx" // Have to change apply option to export the first time I run it. 
 								
