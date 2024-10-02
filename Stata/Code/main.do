@@ -11,7 +11,7 @@
 	
 	* Add file paths to DataWork folder and the Github folder for RRF2024
 	if "`c(username)'" == "stell" { // Change username
-        *global onedrive "???/DataWork"
+        global onedrive "C:\Users\stell\Dropbox\RRF course\DataWork"
 		global github 	"C:\Users\stell\OneDrive\Escritorio\Documentos\GitHub\rrf_github_ar" // Change path
     }
 	
@@ -24,7 +24,7 @@
 	sysdir set PLUS "${code}/ado" // Create always this folder and add the path 
 
 
-	* Install packages 
+	/* Install packages 
 	local user_commands	ietoolkit iefieldkit winsor sumstats estout keeporder grc1leg2 //Add required user-written commands
 
 	foreach command of local user_commands {
@@ -33,6 +33,7 @@
 		   ssc install `command'
 	   }
 	}
+	*/
 
 	* Run do files 
 	* Switch to 0/1 to not-run/run do-files 
