@@ -81,24 +81,24 @@ cap isid hhid // NO
 		
 		label define df_CROP 40 "Coconut" 41 "Sesame", add
 		
-		* Turn numeric variables with negative values into missings
-		ds, has(type string)
-		global numVars `r(varlist)'
-
-		/*foreach numVar of global numVars {
-			
-			recode `numVar' (-88 = .d) //.d is don't know
-		}	*/
-		
-		* Explore variables for outliers
-		sum food_cons nonfood_cons ar_farm, det
-		
 		* dropping, ordering, labeling before saving
-		drop 	ar_farm_unit crop_other
+		drop 	ar_farm_unit crop_other duration 
 				
 		order 	ar_unit, after(ar_farm)
 		
 		lab var submissiondate "Date of interview"
+		
+		* Turn numeric variables with negative values into missings
+		ds, has(type string)
+		global numVars `r(varlist)'
+
+		foreach numVar of global numVars {
+			
+			recode `numVar' (-88 = .d) //.d is don't know
+		}	
+		
+		* Explore variables for outliers
+		sum food_cons nonfood_cons ar_farm, det
 		
 		isid hhid, sort
 		
@@ -115,7 +115,7 @@ cap isid hhid // NO
 
 	preserve 
 
-		keep `mem_vars' `ida'
+		keep `ids' `mem_vars' 
 
 		* tidy: reshape tp hh-mem level 
 		reshape long `reshape_mem', i(`ids') j(member) 
@@ -132,7 +132,7 @@ cap isid hhid // NO
 		// create a template first, then edit the template and change the syntax to 
 		// iecodebook apply
 		iecodebook apply  using ///
-								"${outputs}/hh_mem_codebook.xlsx"
+					"${outputs}/hh_mem_codebook.xlsx" // Have to change apply option to export the first time I run it. 
 								
 		isid hhid member					
 		
