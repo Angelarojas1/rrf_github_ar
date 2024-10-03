@@ -2,6 +2,8 @@
 							Template Main do-file							   
 *******************************************************************************/
 
+	clear all
+	
 	* Set version
 	version 18  // change this to the version everyone has
 

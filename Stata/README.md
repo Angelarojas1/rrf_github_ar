@@ -1,5 +1,8 @@
 # Reproducible Research Fundamentals 2024 - Stata
 
+Author: Ángela Rojas
+Last modified: October 3, 2024
+
 Welcome to the **Reproducible Research Fundamentals 2024** training repository. This repository will guide you through all the exercises across the following stages:
 
 - **0. GitHub Workflow**: Gain essential GitHub skills, including how to create branches, commit changes, and open pull requests.
@@ -8,10 +11,22 @@ Welcome to the **Reproducible Research Fundamentals 2024** training repository. 
 - **3. Data Analysis**: Conduct analyses using the constructed data.
 - **4. Reproducibility Package**: Package all work into a reproducible format for sharing and validation.
 
-Feel free to update this README as you progress through the sessions and customize it to reflect the details of your project. For more details on the elements required for a reproducibility package, refer to our [README template](https://github.com/worldbank/wb-reproducible-research-repository/blob/main/resources/README_Template.md), which you will cover in the **Reproducibility Package** session.
+Instruction to run the code:
+main.do: Please change paths in lines 13-16 to your own paths.
+In main.do you are going to find the names of the files that we run in this Project. 
 
-Remember this is what you will share with your peer at the end of the training for review. 
+Dependencies: 
+In the GitHub repository you are going to fine an ado folder (Stata/Code/ado) with all the packages needed to run Stata do files.
 
-Date: September 30, 2024
-Training session
+Raw data:
+- ** TZA at household level databases.
+     1.treat_status.dta
+     2.TZA_amenity.csv
+     3.TZA_CCT_baseline.dta
+ 
+- ** Data was shared by DIME Analytics team on september 30, 2024. 
+
+
+
+
 
