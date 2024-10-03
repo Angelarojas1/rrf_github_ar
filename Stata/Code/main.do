@@ -3,7 +3,7 @@
 *******************************************************************************/
 
 	* Set version
-	version 18.0 // change this to the version everyone has
+	version 18  // change this to the version everyone has
 
 	* Set project global(s)	
 	// User: you 
@@ -11,13 +11,13 @@
 	
 	* Add file paths to DataWork folder and the Github folder for RRF2024
 	if "`c(username)'" == "stell" { // Change username
-        global onedrive "C:\Users\stell\Dropbox\RRF course\DataWork"
+        global dropbox "C:\Users\stell\Dropbox\RRF course\DataWork"
 		global github 	"C:\Users\stell\OneDrive\Escritorio\Documentos\GitHub\rrf_github_ar" // Change path
     }
 	
 	
 	* Set globals for sub-folders 
-	global data 	"${onedrive}/Data"
+	global data 	"${dropbox}/Data"
 	global code 	"${github}/Stata/Code"
 	global outputs 	"${github}/Stata/Outputs"
 	
